@@ -2,7 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Front End Developer Portfolio">
+    <title>Anna Bekkarevich Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <nav class="menu">
+      <div class="menu__bar">
+        <div class="menu__text">
+          <h1 class="menu__name">Anna Bekkarevich</h1>
+          <span class="menu__title">Front End Developer</span>
+        </div>
+        <button class="menu__btn" type="button">Menu</button>
+      </div>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#about">About</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#skills">Skills</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="main">
+      <section class="section section--about" id="about">
+        <h2 class="section__title visually-hidden">About</h2>
+        <div class="about">
+          <p class="about__text">Lorem ipsum dolor sit amet consectetur adipiscing elit maecenas netus, purus mauris sagittis nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque quam phasellus et dui suspendisse, quisque habitasse vel nunc</p>
+        </div>
+      </section>
+      <section class="section" id="portfolio">
+        <h2 class="section__title">Portfolio</h2>
+        <ul class="portfolio__list">
+          <li class="portfolio__item">
+            <figure class="item">
+              <a class="item__img-link" href="#">
+                <img class="item__img" src="https://via.placeholder.com/300x200" width="300" height="200" alt="Project">
+              </a>
+              <figcaption class="item__text">
+                <h3>Eleifend euismod dis cubilia</h3>
+                <p>nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque</p>
+                <div class="item__links-wrapper">
+                  <a class="btn item__link" href="#">View Online</a>
+                  <a class="btn item__link" href="#">View Source</a>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="portfolio__item">
+            <figure class="item">
+              <a class="item__img-link" href="#">
+                <img class="item__img" src="https://via.placeholder.com/300x200" width="300" height="200" alt="Project">
+              </a>
+              <figcaption class="item__text">
+                <h3>Eleifend euismod dis cubilia</h3>
+                <p>nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque</p>
+                <div class="item__links-wrapper">
+                  <a class="btn item__link" href="#">View Online</a>
+                  <a class="btn item__link" href="#">View Source</a>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="skills">
+        <h2 class="section__title">Skills</h2>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="HTML5">
+              </li>
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="CSS3">
+              </li>
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="JavaScript">
+              </li>
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="jQuery">
+              </li>
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Sass">
+              </li>
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Gulp">
+              </li>
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Git">
+              </li>
+              <li class="skills__item">
+                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="GitHub">
+              </li>
+            </ul>
+      </section>
+      <section class="section section--contact" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <ul class="contact">
+          <li class="contact__item">
+            <a class="contact__link" href="mailto:annabekkarevich@gmail.com">Send me an email</a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link" href="https://github.com/annagh1" target="_blank">Check out my GitHub profile</a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link" href="https://linkedin.com/in/annabekkarevich" target="_blank">Connect with me on LinkedIn</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
