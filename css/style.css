@@ -188,6 +188,8 @@ a {
   margin: 0;
   padding-top: 30px;
   text-align: center;
+  font-size: 1.1em;
+  line-height: 1.8em;
 }
 
 
@@ -204,7 +206,7 @@ a {
   margin: 10px;
   padding: 10px;
   text-align: center;
-  border: 1px solid grey;
+  border: 1px solid #b9b6b8;
 }
 
 .btn:hover {
@@ -270,6 +272,7 @@ a {
 /* contact */
 .contact {
   display: flex;
+  padding-bottom: 50px;
 }
 
 .contact__item {
@@ -286,11 +289,9 @@ a {
 
 .contact__link {
   position: relative;
-
   display: block;
-  height: 40px;
+  box-sizing: border-box;
   padding-left: 40px;
-
   font-size: 0;
 }
 
@@ -307,15 +308,15 @@ a {
 }
 
 .contact__link--email::before {
-  background-image: url("https://via.placeholder.com/60x60");
+  background-image: url("../img/email.svg");
 }
 
 .contact__link--gh::before {
-  background-image: url("https://via.placeholder.com/60x60");
+  background-image: url("../img/github-mark.png");
 }
 
 .contact__link--li::before {
-  background-image: url("https://via.placeholder.com/60x60");
+  background-image: url("../img/in.png");
 }
 
 /* footer */
@@ -348,13 +349,13 @@ a {
   }
 
   .menu__bar {
-    flex-basis: 28%;
+    flex-basis: 29%;
     margin: 0;
   }
 
   .menu__list {
     flex-direction: row;
-    flex-basis: 64%;
+    flex-basis: 63%;
     justify-content: space-around;
     height: auto;
     overflow: visible;
@@ -402,6 +403,44 @@ a {
   .skills__img {
     width: 120px;
   }
+
+  /* contact */
+  .contact__link {
+    width: 216px;
+    min-height: 60px;
+    padding: 12px;
+    font-size: 1em;
+    line-height: 20px;
+    text-align: right;
+    color: #000;
+    border: 1px solid #b9b6b8;
+  }
+
+  .contact__link--email {
+    padding-left: 116px;
+  }
+
+  .contact__link--gh {
+    padding-left: 70px;
+  }
+
+  .contact__link--li {
+    padding-left: 65px;
+  }
+
+  .contact__link:hover {
+    font-weight: 700;
+  }
+
+  .contact__link:active {
+    font-weight: 700;
+    opacity: 0.5;
+  }
+
+  .contact__link::before {
+    top: 12px;
+    left: 12px;
+  }
 }
 
 /* breakpoint 1200px */
@@ -423,5 +462,9 @@ a {
 
   .skills__img {
     width: 150px;
+  }
+
+  .contact__link {
+    width: 260px;
   }
 }
