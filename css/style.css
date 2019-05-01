@@ -31,7 +31,6 @@ body {
   body {
     width: 1920px;
     margin: 0 auto;
-    outline: 2px solid magenta;
   }
 }
 
@@ -84,21 +83,30 @@ a {
   display: flex;
   justify-content: space-between;
   height: 60px;
-  padding: 10px;
-  padding-left: 24px;
+  margin: 0 10px;
+  padding: 10px 0;
   background-color: #fff;
 }
 
 .menu__btn {
   position: relative;
   align-self: center;
-  width: 60px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin: 0;
   padding: 0;
-  border: 1px solid #000;
+  border: none;
   background-color: #fff;
+  font-size: 0;
   cursor: pointer;
+  background-image: url("../img/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.menu__btn--close {
+  background-image: url("../img/close.svg");
 }
 
 .menu__text {
@@ -107,7 +115,11 @@ a {
 
 .menu__name {
   margin: 0;
-  font-size: 1.4em;
+  font-size: 1.5em;
+}
+
+.menu__title {
+  font-size: 1.1em;
 }
 
 .menu__list {
@@ -135,10 +147,18 @@ a {
   color: #000;
 }
 
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu__link:active {
+  text-decoration: underline;
+  opacity: 0.5;
+}
 
 /* section */
 .section {
-  margin: 0 8%;
+  margin: 0 4%;
   padding-top: 80px;
 }
 
@@ -152,6 +172,8 @@ a {
 }
 
 .section__title {
+  margin: 0;
+  padding: 1.5em 0;
   text-transform: uppercase;
   text-align: center;
 }
@@ -178,18 +200,23 @@ a {
 /* btn */
 .btn {
   display: block;
+  box-sizing: border-box;
   margin: 10px;
   padding: 10px;
   text-align: center;
   border: 1px solid grey;
 }
 
-
-/* item */
-.item {
-  width: 100%;
+.btn:hover {
+  font-weight: 700;
 }
 
+.btn:active {
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+/* item */
 .item__img-link {
   display: block;
 }
@@ -197,9 +224,15 @@ a {
 .item__img {
   display: block;
   margin: 0 auto;
+  transition: all ease-in 250ms;
+}
+
+.item__img:hover {
+  transform: scale(1.05);
 }
 
 .item__text {
+  padding: 0 5%;
   text-align: center;
 }
 
@@ -210,7 +243,7 @@ a {
 }
 
 .item__link {
-  flex-basis: 70%;
+  width: 260px;
   color: #000;
 }
 
@@ -223,8 +256,8 @@ a {
 
 .skills__item {
   display: flex;
-  width: 33%;
-  padding: 10px;
+  width: 33.33%;
+  padding: 3%;
   box-sizing: border-box;
 }
 
@@ -240,7 +273,7 @@ a {
 }
 
 .contact__item {
-  margin-right: 24px;
+  margin-right: 34px;
 }
 
 .contact__item:first-child {
@@ -255,8 +288,8 @@ a {
   position: relative;
 
   display: block;
-  height: 60px;
-  padding-left: 60px;
+  height: 40px;
+  padding-left: 40px;
 
   font-size: 0;
 }
@@ -266,12 +299,29 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
+.contact__link--email::before {
   background-image: url("https://via.placeholder.com/60x60");
 }
 
+.contact__link--gh::before {
+  background-image: url("https://via.placeholder.com/60x60");
+}
+
+.contact__link--li::before {
+  background-image: url("https://via.placeholder.com/60x60");
+}
+
+/* footer */
+.footer__copyright {
+  text-align: center;
+}
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
   /* menu */
@@ -290,6 +340,7 @@ a {
   /* menu */
   .menu {
     display: flex;
+    margin: 0 4%;
   }
 
   .menu__btn {
@@ -297,12 +348,13 @@ a {
   }
 
   .menu__bar {
-    flex-basis: 30%;
+    flex-basis: 28%;
+    margin: 0;
   }
 
   .menu__list {
     flex-direction: row;
-    flex-basis: 70%;
+    flex-basis: 64%;
     justify-content: space-around;
     height: auto;
     overflow: visible;
@@ -311,7 +363,7 @@ a {
 
   /* section */
   .section {
-    margin: 0 4%;
+    margin: 0 2%;
   }
 
   .section--contact {
@@ -321,6 +373,7 @@ a {
   /* about */
   .about__text {
     margin: 0 12%;
+    padding-top: 70px;
   }
 
   /* portfolio */
@@ -331,14 +384,23 @@ a {
 
   .portfolio__item {
     flex-basis: 50%;
-    padding: 0 16px;
+    padding: 0  10px;
     box-sizing: border-box;
+  }
+
+  /* item */
+  .item__text {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   /* skills */
   .skills__item {
     width: 25%;
-    padding: 20px;
+  }
+
+  .skills__img {
+    width: 120px;
   }
 }
 
@@ -357,5 +419,9 @@ a {
   /* skills */
   .skills__item {
     width: 20%;
+  }
+
+  .skills__img {
+    width: 150px;
   }
 }

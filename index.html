@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Front End Developer Portfolio">
     <title>Anna Bekkarevich Portfolio</title>
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/libs/picturefill.min.js" async></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -32,92 +37,119 @@
         </li>
       </ul>
     </nav>
-    <main class="main">
-      <section class="section section--about" id="about">
-        <h2 class="section__title visually-hidden">About</h2>
-        <div class="about">
-          <p class="about__text">Lorem ipsum dolor sit amet consectetur adipiscing elit maecenas netus, purus mauris sagittis nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque quam phasellus et dui suspendisse, quisque habitasse vel nunc</p>
-        </div>
-      </section>
-      <section class="section" id="portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <ul class="portfolio__list">
-          <li class="portfolio__item">
-            <figure class="item">
-              <a class="item__img-link" href="#">
-                <img class="item__img" src="https://via.placeholder.com/300x200" width="300" height="200" alt="Project">
-              </a>
-              <figcaption class="item__text">
-                <h3>Eleifend euismod dis cubilia</h3>
-                <p>nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque</p>
-                <div class="item__links-wrapper">
-                  <a class="btn item__link" href="#">View Online</a>
-                  <a class="btn item__link" href="#">View Source</a>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="portfolio__item">
-            <figure class="item">
-              <a class="item__img-link" href="#">
-                <img class="item__img" src="https://via.placeholder.com/300x200" width="300" height="200" alt="Project">
-              </a>
-              <figcaption class="item__text">
-                <h3>Eleifend euismod dis cubilia</h3>
-                <p>nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque</p>
-                <div class="item__links-wrapper">
-                  <a class="btn item__link" href="#">View Online</a>
-                  <a class="btn item__link" href="#">View Source</a>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
-      </section>
-      <section class="section" id="skills">
-        <h2 class="section__title">Skills</h2>
-            <ul class="skills__list">
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="HTML5">
-              </li>
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="CSS3">
-              </li>
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="JavaScript">
-              </li>
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="jQuery">
-              </li>
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Sass">
-              </li>
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Gulp">
-              </li>
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Git">
-              </li>
-              <li class="skills__item">
-                <img class="skills__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="GitHub">
-              </li>
-            </ul>
-      </section>
-      <section class="section section--contact" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <ul class="contact">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:annabekkarevich@gmail.com">Send me an email</a>
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="https://github.com/annagh1" target="_blank">Check out my GitHub profile</a>
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="https://linkedin.com/in/annabekkarevich" target="_blank">Connect with me on LinkedIn</a>
-          </li>
-        </ul>
-      </section>
-    </main>
+    <section class="section section--about" id="about">
+      <h2 class="section__title visually-hidden">About</h2>
+      <div class="about">
+        <p class="about__text">Lorem ipsum dolor sit amet consectetur adipiscing elit maecenas netus, purus mauris sagittis nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque quam phasellus et dui suspendisse, quisque habitasse vel nunc</p>
+      </div>
+    </section>
+    <section class="section" id="portfolio">
+      <h2 class="section__title">Portfolio</h2>
+      <ul class="portfolio__list">
+        <li class="portfolio__item">
+          <figure class="item">
+            <a class="item__img-link" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/projects/dd-md.png">
+                <img class="item__img" src="img/projects/dd-sm.png" width="320" height="231" alt="Doingsdone">
+              </picture>
+            </a>
+            <figcaption class="item__text">
+              <h3>Eleifend euismod dis cubilia</h3>
+              <p>nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque</p>
+              <div class="item__links-wrapper">
+                <a class="btn item__link" href="#">View Online</a>
+                <a class="btn item__link" href="#">View Source</a>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="portfolio__item">
+          <figure class="item">
+            <a class="item__img-link" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/projects/kb-md.png">
+                <img class="item__img" src="img/projects/kb-sm.png" width="320" height="231" alt="Keksobooking">
+              </picture>
+            </a>
+            <figcaption class="item__text">
+              <h3>Eleifend euismod dis cubilia</h3>
+              <p>nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque</p>
+              <div class="item__links-wrapper">
+                <a class="btn item__link" href="#">View Online</a>
+                <a class="btn item__link" href="#">View Source</a>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="portfolio__item">
+          <figure class="item">
+            <a class="item__img-link" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/projects/sed-md.png">
+                <img class="item__img" src="img/projects/sed-sm.png" width="320" height="231" alt="Sedona">
+              </picture>
+            </a>
+            <figcaption class="item__text">
+              <h3>Eleifend euismod dis cubilia</h3>
+              <p>nullam dictum tempor leo. Eleifend euismod dis cubilia primis eros ultrices habitant, magna nisl natoque</p>
+              <div class="item__links-wrapper">
+                <a class="btn item__link" href="#">View Online</a>
+                <a class="btn item__link" href="#">View Source</a>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <section class="section" id="skills">
+      <h2 class="section__title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <img class="skills__img" src="img/html.svg" width="70" height="70" alt="HTML5">
+            </li>
+            <li class="skills__item">
+              <img class="skills__img" src="img/css.svg" width="70" height="70" alt="CSS3">
+            </li>
+            <li class="skills__item">
+              <img class="skills__img" src="img/js.svg" width="70" height="70" alt="JavaScript">
+            </li>
+            <li class="skills__item">
+              <img class="skills__img" src="img/jquery.svg" width="70" height="18" alt="jQuery">
+            </li>
+            <li class="skills__item">
+              <img class="skills__img" src="img/sass.svg" width="70" height="53" alt="Sass">
+            </li>
+            <li class="skills__item">
+              <img class="skills__img" src="img/gulp.svg" width="70" height="70" alt="Gulp">
+            </li>
+            <li class="skills__item">
+              <img class="skills__img" src="img/git.png" width="70" height="30" alt="Git">
+            </li>
+            <li class="skills__item">
+              <img class="skills__img" src="img/github.png" width="70" height="29" alt="GitHub">
+            </li>
+          </ul>
+    </section>
+    <section class="section section--contact" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <ul class="contact">
+        <li class="contact__item">
+          <a class="contact__link  contact__link--email" href="mailto:annabekkarevich@gmail.com">Send me an email</a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__link contact__link--gh" href="https://github.com/annagh1" target="_blank">Check out my GitHub profile</a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__link  contact__link--li" href="https://linkedin.com/in/annabekkarevich" target="_blank">Connect with me on LinkedIn</a>
+        </li>
+      </ul>
+    </section>
+    <footer class="footer">
+      <p class="footer__copyright">
+        Copyright © 2019 Anna Bekkarevich
+      </p>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
