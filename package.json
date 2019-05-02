@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaGH1/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaGH1/portfolio/issues"
+  },
+  "homepage": "https://github.com/AnnaGH1/portfolio#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-recommended": "^2.2.0"
+  }
+}
