@@ -173,6 +173,7 @@ a {
 
 .section--contact {
   height: calc(100vh - 200px);
+  padding-bottom: 40px;
 }
 
 .section__title {
@@ -476,7 +477,7 @@ a {
   }
 
   .contact__link {
-    width: 216px;
+    width: 220px;
     min-height: 60px;
     padding: 12px;
     font-size: 1em;
