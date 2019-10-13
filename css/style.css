@@ -218,6 +218,7 @@ a {
   text-align: center;
   color: #000;
   border: 1px solid #b9b6b8;
+  transition: all 260ms ease-out;
 }
 
 .btn--action {
@@ -245,7 +246,7 @@ a {
 
 .btn:hover {
   font-weight: 700;
-  transform: scale(1.05);
+  box-shadow: inset 0 0 4px 4px #b9b6b8;
 }
 
 .btn:active {
